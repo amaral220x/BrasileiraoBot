@@ -28,10 +28,12 @@ async def on_ready():
 async def pedro(ctx):
     await ctx.send('Foda-se o Pedro')
 
-@client.command(aliasses=['campeonato', 'Campeonato'])
-async def campeonato(ctx):
+@client.command(aliasses=['Campeonato'])
+async def campeonato(ctx, *args):
+    arg = ''.join(args).lower();
+    if arg == 'copadobrasil':
     #Fazendo a requisição com a chave da api 
-    url = 'https://api.api-futebol.com.br/v1/campeonatos'
+        url = 'https://api.api-futebol.com.br/v1/campeonatos/2'
     head = {'Authorization': 'Bearer ' + keys.get_api_key()}
     r = requests.get(url, headers=head)
 
@@ -41,9 +43,13 @@ async def campeonato(ctx):
     datastore = json.loads(r)
     embed = discord.Embed(colour = discord.Colour.blue())
     embed.set_author(name="Campeonato", icon_url='https://logodownload.org/wp-content/uploads/2018/10/copa-do-brasil-logo-1.png')
-    embed.add_field(name='Nome do campeonato', value=datastore[0]['nome_popular'])
-    embed.add_field(name='Edição', value=datastore[0]['edicao_atual']['temporada'])
-    embed.add_field(name='Edição', value=datastore[0]['fase_atual']['nome'])
+        embed.add_field(name='Nome do campeonato', value=datastore['nome_popular'])
+        embed.add_field(name='Edição', value=datastore['edicao_atual']['temporada'])
+        embed.add_field(name='Tipo', value=datastore['tipo'])
+        embed.add_field(name='Fase', value=datastore['fase_atual']['nome'])
+        embed.add_field(name='Status', value=datastore['status'])
+        embed.set_footer(text=time.strftime("%X %d/%m/%Y"))
+        await ctx.send(embed=embed)
     embed.set_footer(text=time.strftime("%X %d/%m/%Y"))
     await ctx.send(embed=embed)
 
