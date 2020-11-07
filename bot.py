@@ -66,6 +66,8 @@ async def campeonato(ctx, *args):
 
     embed.set_footer(text=time.strftime("%X %d/%m/%Y"))
     await ctx.send(embed=embed)
+    else:
+        await ctx.send("Você não forneceu nenhum campeonato disnponível.")
 
 
 client.run(keys.get_bot_key())
