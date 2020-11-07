@@ -4,12 +4,24 @@ import keys
 import requests 
 import json
 import time
+import random 
 
 client = commands.Bot(command_prefix = '.')
 
 @client.event
 async def on_ready():
-    await client.change_presence(activity=discord.Game('Esperando o BBBasco'))
+    atividade = [ 
+        'Esperando o Vasco cair',
+        'Secando o mengão',
+        'Acompanhando o Dinizmo',
+        'Enxugando lágrimas de um botafoguense',
+        'Contratando um novo técnico',
+        '[O Fluminense entrou com um recurso e essa mensagem foi retirada.]'
+    ]
+    rand = random.randint(0, len(atividade)-1)
+    print(rand)
+    random_atividade = atividade[rand]
+    await client.change_presence(activity=discord.Game(random_atividade))
     print('Bot is ready')
 
 @client.command()
