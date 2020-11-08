@@ -49,7 +49,9 @@ Eu criei esse bot com o objetivo de testar meus conhecimentos em Python e me div
 ### Executando
 
 Instalando as dependências, basta executar o código:
->$ python3 bot.py
+```
+$ python3 bot.py
+```
 
 ---
 
