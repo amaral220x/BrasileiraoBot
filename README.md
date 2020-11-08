@@ -3,7 +3,7 @@
     Brasileirão Bot
 </h1>
 
-<p align="center">Um bot para discord sobre o Campeonato Brasileiro, e futuramente, sobre a Copa do Brasil.</p>
+<p align="center">Um bot para discord sobre o Campeonato Brasileiro e, futuramente, sobre a Copa do Brasil.</p>
 
 <h4 align="center"> 
 	🚧  Em atualização...  🚧
@@ -49,7 +49,9 @@ Eu criei esse bot com o objetivo de testar meus conhecimentos em Python e me div
 ### Executando
 
 Instalando as dependências, basta executar o código:
->$ python3 bot.py
+```
+$ python3 bot.py
+```
 
 ---
 
