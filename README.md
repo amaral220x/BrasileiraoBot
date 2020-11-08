@@ -36,7 +36,12 @@ Eu criei esse bot com o objetivo de testar meus conhecimentos em Python e me div
 - [ ] Retornar a posição de uma determinada equipe
 - [ ] ...
 ---
-
+## 🤖 Comandos
+O prefixo do bot é o caractere '.'
+- >.campeonato brasileirao 
+- >.campeonato copa do brasil 
+- >.tabela brasileirao (aceita argumentos extras como g4, z4 e as paginas da tabela p2 e p3)
+---
 ## 👨‍🔧 Executando o bot 
 
 ### Pré-requisitos
