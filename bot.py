@@ -90,7 +90,7 @@ async def tabela(ctx, *args):
                         embed.add_field(name='Nome do time', value= ds['time']['nome_popular'])
                         embed.add_field(name='Nº de pontos', value= ds['pontos'])
                         embed.set_footer(text = 'Para alguma zona em específico da tabela, tente usar G4 ou Z4. Para o resto da tabela, tente p2 ou p3', icon_url='https://logodownload.org/wp-content/uploads/2018/10/campeonato-brasileiro-logo-brasileirao-logo-5.png')
-            elif arg_list[1] == 'z4' or arg_list[1] == 'p3': 
+            elif arg_list[1] == 'z4': 
                 embed = discord.Embed(colour = discord.Colour.red())
                 embed.set_author(name="Brasileirão 2020", icon_url='https://logodownload.org/wp-content/uploads/2018/10/campeonato-brasileiro-logo-brasileirao-logo-5.png')
                 embed.set_thumbnail(url = 'https://logodownload.org/wp-content/uploads/2018/10/campeonato-brasileiro-logo-brasileirao-logo-5.png')
@@ -106,6 +106,16 @@ async def tabela(ctx, *args):
                 embed.set_thumbnail(url = 'https://logodownload.org/wp-content/uploads/2018/10/campeonato-brasileiro-logo-brasileirao-logo-5.png')
                 for ds in datastore:
                     if ds['posicao'] < 16 and ds['posicao'] > 8 :
+                        embed.add_field(name='Posição', value= str(ds['posicao']) + 'º')
+                        embed.add_field(name='Nome do time', value= ds['time']['nome_popular'])
+                        embed.add_field(name='Nº de pontos', value= ds['pontos'])
+                        embed.set_footer(text = 'Para alguma zona em específico da tabela, tente usar G4 ou Z4. Para o resto da tabela, tente p2 ou p3', icon_url='https://logodownload.org/wp-content/uploads/2018/10/campeonato-brasileiro-logo-brasileirao-logo-5.png')
+            elif arg_list[1] == 'p3':
+                embed = discord.Embed(colour = discord.Colour.blue())
+                embed.set_author(name="Brasileirão 2020", icon_url='https://logodownload.org/wp-content/uploads/2018/10/campeonato-brasileiro-logo-brasileirao-logo-5.png')
+                embed.set_thumbnail(url = 'https://logodownload.org/wp-content/uploads/2018/10/campeonato-brasileiro-logo-brasileirao-logo-5.png')
+                for ds in datastore:
+                    if ds['posicao'] > 15  :
                         embed.add_field(name='Posição', value= str(ds['posicao']) + 'º')
                         embed.add_field(name='Nome do time', value= ds['time']['nome_popular'])
                         embed.add_field(name='Nº de pontos', value= ds['pontos'])
