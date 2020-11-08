@@ -13,7 +13,8 @@
  <a href="#-objetivo">Objetivo</a> •
  <a href="#-afazer">A fazer</a> •
  <a href="#-comantos">Comandos</a> •
- <a href="#-executando-o-nomeaqui">Como executar</a> • 
+ <a href="#-comantos">Como ajudar</a> •
+ <a href="#-executando-o-bot">Executando o bot</a> • 
  <a href="#-tecnologias">Tecnologias</a> •  
  <a href="#-desenvolvedores">Desenvolvedores</a> • 
  <a href="#-licença">Licença</a>
