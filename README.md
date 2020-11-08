@@ -12,6 +12,7 @@
 <p align="center">
  <a href="#-objetivo">Objetivo</a> •
  <a href="#-afazer">A fazer</a> •
+ <a href="#-comantos">Comandos</a> •
  <a href="#-executando-o-nomeaqui">Como executar</a> • 
  <a href="#-tecnologias">Tecnologias</a> •  
  <a href="#-desenvolvedores">Desenvolvedores</a> • 
@@ -41,6 +42,16 @@ O prefixo do bot é o caractere '.'
 - >.campeonato brasileirao 
 - >.campeonato copa do brasil 
 - >.tabela brasileirao (aceita argumentos extras como g4, z4 e as paginas da tabela p2 e p3)
+---
+
+## 🤝🏾 Como ajudar
+O projeto do bot é totalmente open-source! Sinta-se a vontade para:
+- Sugerir novas funcionalidades
+- Pedir por correção de bugs 
+- Implementar novas funcionalidades 
+
+Dicas e elogios também são bem vindos!
+
 ---
 ## 👨‍🔧 Executando o bot 
 
